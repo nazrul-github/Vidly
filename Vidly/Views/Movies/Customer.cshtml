@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Vidly.Models.Customer>
+
+<h1>
+   @Model
+</h1>
+<table class="table">
+    <tr>
+        <th>
+          @Model
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+       
+    </tr>
+}
+
+</table>
