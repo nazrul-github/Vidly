@@ -242,8 +242,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_navbar.cshtml" />
-    <Content Include="Views\Movies\AllCustomer.cshtml" />
-    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Movies\Customer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

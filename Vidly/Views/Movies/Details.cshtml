@@ -1,9 +1,0 @@
-﻿@using Vidly.Models
-@model Vidly.Models.Customer
-@{
-    Customer aCustomer = Model;
-}
-<h2>@aCustomer.Name</h2>
-<p>
-    @Html.ActionLink("Go to customers", "AllCustomer")
-</p>
