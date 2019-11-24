@@ -1,0 +1,26 @@
+﻿@using Vidly.Models
+@model IList<Customer>
+@{
+    IList<Customer> alCustomers = Model;
+}
+
+<h1>
+ Customer
+</h1>
+<table class="table">
+    <tr>
+        <th>
+         Customer
+        </th>
+    </tr>
+
+@foreach (var item in alCustomers) {
+    <tr>
+        <td>
+           @Html.ActionLink(item.Name,"Details",new{id = item.Id})
+        </td>
+       
+    </tr>
+}
+
+</table>
