@@ -5,22 +5,32 @@
 }
 
 <h1>
- Customer
+    Customer
 </h1>
-<table class="table">
-    <tr>
-        <th>
-         Customer
-        </th>
-    </tr>
+@if (Model.Count > 0)
+{
+    <table class="table">
+        <tr>
+            <th>
+                Customer
+            </th>
+        </tr>
 
-@foreach (var item in alCustomers) {
-    <tr>
-        <td>
-           @Html.ActionLink(item.Name,"Details",new{id = item.Id})
-        </td>
-       
-    </tr>
+        @foreach (var item in alCustomers)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Name, "Details", new {id = item.Id})
+                </td>
+
+            </tr>
+        }
+
+    </table>
 }
-
-</table>
+else
+{
+    <div class="alert alert-danger">
+        <p>We don't have any customer yet</p>
+    </div>
+}

@@ -61,5 +61,6 @@ namespace Vidly.Controllers
             Customer aCustomer = alCustomers.Find(cus => cus.Id == id);
             return View(aCustomer);
         }
+        
     }
 }
