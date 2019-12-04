@@ -3,7 +3,6 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using Vidly.EntityConfigaration;
 
 namespace Vidly.Models
 {
@@ -21,11 +20,6 @@ namespace Vidly.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-<<<<<<< Updated upstream
-=======
-        
-
->>>>>>> Stashed changes
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

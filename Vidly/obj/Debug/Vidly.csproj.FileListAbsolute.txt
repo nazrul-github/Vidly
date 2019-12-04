@@ -208,14 +208,3 @@ G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cac
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.dll
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.pdb
-<<<<<<< Updated upstream
-=======
-G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.CreatingDatabaseTable.resources
-G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
-G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.IsSubscribedToNewsLetterColumnAdded.resources
-G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.MembershipForeignKeyAddedInCustomerTable.resources
-G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulatingMembersipTable.resources
-G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.UpdatedNameCOlumnInCustomerTable.resources
-G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.UpdatedNameCOlumnInCustomerTable1.resources
-G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.UpdateMembershipTableAndCustomerTableRelation.resources
->>>>>>> Stashed changes
