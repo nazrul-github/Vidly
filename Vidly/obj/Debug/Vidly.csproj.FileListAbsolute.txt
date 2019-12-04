@@ -208,3 +208,7 @@ G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cac
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.dll
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.pdb
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialMigrationNoChangesAdded.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.anotheremptymigration.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.anotheremptymigration1.resources
