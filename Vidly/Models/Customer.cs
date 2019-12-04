@@ -12,7 +12,8 @@ namespace Vidly.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public bool IsSubscribedToNewsLetter { get; set; }
-        public byte MembershipId { get; set; }
+        public DateTime? BirthDate { get; set; }
+        public int MembershipId { get; set; }
         [ForeignKey("MembershipId")]
         public MembershipType MembershipType { get; set; }
 

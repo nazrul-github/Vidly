@@ -1,0 +1,24 @@
+﻿@model Vidly.Models.Customer
+
+<div>
+    <h4>@Model.Name</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+       
+
+        <dd>
+            @Html.DisplayNameFor(model => model.MembershipType.MembershipName): @Html.DisplayFor(model => model.MembershipType.MembershipName)
+        </dd>
+        @if (Model.BirthDate != null)
+        {
+            <dd>
+             @Html.DisplayNameFor(model=>model.BirthDate):   @Html.DisplayFor(model => model.BirthDate)
+
+            </dd>
+        }
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

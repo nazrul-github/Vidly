@@ -169,6 +169,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -187,9 +188,54 @@
     <Compile Include="Migrations\201912041548493_anotheremptymigration1.designer.cs">
       <DependentUpon>201912041548493_anotheremptymigration1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912041634501_renamingMembershipColumn.cs" />
+    <Compile Include="Migrations\201912041634501_renamingMembershipColumn.designer.cs">
+      <DependentUpon>201912041634501_renamingMembershipColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041658060_ChangingDatatypeOfMembershiptypes.cs" />
+    <Compile Include="Migrations\201912041658060_ChangingDatatypeOfMembershiptypes.designer.cs">
+      <DependentUpon>201912041658060_ChangingDatatypeOfMembershiptypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041746159_AddedColumnMembershipNameToMembershipTypes.cs" />
+    <Compile Include="Migrations\201912041746159_AddedColumnMembershipNameToMembershipTypes.designer.cs">
+      <DependentUpon>201912041746159_AddedColumnMembershipNameToMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041755307_settingValueForNameColumn.cs" />
+    <Compile Include="Migrations\201912041755307_settingValueForNameColumn.designer.cs">
+      <DependentUpon>201912041755307_settingValueForNameColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041833508_addedColumnBirthdateToCustomer.cs" />
+    <Compile Include="Migrations\201912041833508_addedColumnBirthdateToCustomer.designer.cs">
+      <DependentUpon>201912041833508_addedColumnBirthdateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041834589_settingVelueForBirthdate.cs" />
+    <Compile Include="Migrations\201912041834589_settingVelueForBirthdate.designer.cs">
+      <DependentUpon>201912041834589_settingVelueForBirthdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041912425_CreatedGenreTable.cs" />
+    <Compile Include="Migrations\201912041912425_CreatedGenreTable.designer.cs">
+      <DependentUpon>201912041912425_CreatedGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041914523_AddedGenreToTheMoview.cs" />
+    <Compile Include="Migrations\201912041914523_AddedGenreToTheMoview.designer.cs">
+      <DependentUpon>201912041914523_AddedGenreToTheMoview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041916105_InserDataInGenrTable.cs" />
+    <Compile Include="Migrations\201912041916105_InserDataInGenrTable.designer.cs">
+      <DependentUpon>201912041916105_InserDataInGenrTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041921227_InserttedValueInGenreTable.cs" />
+    <Compile Include="Migrations\201912041921227_InserttedValueInGenreTable.designer.cs">
+      <DependentUpon>201912041921227_InserttedValueInGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041923282_deletedoublenty.cs" />
+    <Compile Include="Migrations\201912041923282_deletedoublenty.designer.cs">
+      <DependentUpon>201912041923282_deletedoublenty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -258,9 +304,12 @@
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_navbar.cshtml" />
     <Content Include="Views\Movies\Customer.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Migrations\201912041918561_InserttedValueInGenreTable\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -284,6 +333,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912041548493_anotheremptymigration1.resx">
       <DependentUpon>201912041548493_anotheremptymigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041634501_renamingMembershipColumn.resx">
+      <DependentUpon>201912041634501_renamingMembershipColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041658060_ChangingDatatypeOfMembershiptypes.resx">
+      <DependentUpon>201912041658060_ChangingDatatypeOfMembershiptypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041746159_AddedColumnMembershipNameToMembershipTypes.resx">
+      <DependentUpon>201912041746159_AddedColumnMembershipNameToMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041755307_settingValueForNameColumn.resx">
+      <DependentUpon>201912041755307_settingValueForNameColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041833508_addedColumnBirthdateToCustomer.resx">
+      <DependentUpon>201912041833508_addedColumnBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041834589_settingVelueForBirthdate.resx">
+      <DependentUpon>201912041834589_settingVelueForBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041912425_CreatedGenreTable.resx">
+      <DependentUpon>201912041912425_CreatedGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041914523_AddedGenreToTheMoview.resx">
+      <DependentUpon>201912041914523_AddedGenreToTheMoview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041916105_InserDataInGenrTable.resx">
+      <DependentUpon>201912041916105_InserDataInGenrTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041921227_InserttedValueInGenreTable.resx">
+      <DependentUpon>201912041921227_InserttedValueInGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041923282_deletedoublenty.resx">
+      <DependentUpon>201912041923282_deletedoublenty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -212,3 +212,14 @@ G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialMigrationN
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.anotheremptymigration.resources
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.anotheremptymigration1.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.renamingMembershipColumn.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.ChangingDatatypeOfMembershiptypes.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedColumnMembershipNameToMembershipTypes.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.settingValueForNameColumn.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.addedColumnBirthdateToCustomer.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.settingVelueForBirthdate.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.CreatedGenreTable.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedGenreToTheMoview.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.InserDataInGenrTable.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.InserttedValueInGenreTable.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.deletedoublenty.resources

@@ -13,9 +13,9 @@ namespace Vidly.Controllers
         // GET: Movies/Random
     /*    public ActionResult Random()
         {
-            Movie newMovie = new Movie() { Name = "Shrek!" };
+            Movie newMovie = new Movie() { MembershipName = "Shrek!" };
 
-            List<Customer> allCustomer = new List<Customer>{new Customer{Name = "Customer One"},new Customer{Name = "Customer Two"}};
+            List<Customer> allCustomer = new List<Customer>{new Customer{MembershipName = "Customer One"},new Customer{MembershipName = "Customer Two"}};
 
             var viewModel = new RandomMovieViewModel{Movie = newMovie,Customers = allCustomer};
 
@@ -36,7 +36,7 @@ namespace Vidly.Controllers
 
             if (string.IsNullOrWhiteSpace(sortby))
             {
-                sortby = "Name";
+                sortby = "MembershipName";
             }
 
             return Content(string.Format("PageIndex={0}&sortBy={1}", pageIndex, sortby));
