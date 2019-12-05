@@ -228,3 +228,4 @@ G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.newColumnAddedInM
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.updatedTheNameColumnPropertiesInMovies.resources
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.populatingMoviesNewColumns.resources
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.addedGenreColumnConstraints.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.membershipTypeTable.resources
