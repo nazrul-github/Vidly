@@ -232,6 +232,26 @@
     <Compile Include="Migrations\201912041923282_deletedoublenty.designer.cs">
       <DependentUpon>201912041923282_deletedoublenty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912050248507_addingNewMoveis.cs" />
+    <Compile Include="Migrations\201912050248507_addingNewMoveis.designer.cs">
+      <DependentUpon>201912050248507_addingNewMoveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912050307285_newColumnAddedInMovies.cs" />
+    <Compile Include="Migrations\201912050307285_newColumnAddedInMovies.designer.cs">
+      <DependentUpon>201912050307285_newColumnAddedInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912050310423_updatedTheNameColumnPropertiesInMovies.cs" />
+    <Compile Include="Migrations\201912050310423_updatedTheNameColumnPropertiesInMovies.designer.cs">
+      <DependentUpon>201912050310423_updatedTheNameColumnPropertiesInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912050311523_populatingMoviesNewColumns.cs" />
+    <Compile Include="Migrations\201912050311523_populatingMoviesNewColumns.designer.cs">
+      <DependentUpon>201912050311523_populatingMoviesNewColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912050359477_addedGenreColumnConstraints.cs" />
+    <Compile Include="Migrations\201912050359477_addedGenreColumnConstraints.designer.cs">
+      <DependentUpon>201912050359477_addedGenreColumnConstraints.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -306,6 +326,9 @@
     <Content Include="Views\Movies\Customer.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -366,6 +389,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912041923282_deletedoublenty.resx">
       <DependentUpon>201912041923282_deletedoublenty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912050248507_addingNewMoveis.resx">
+      <DependentUpon>201912050248507_addingNewMoveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912050307285_newColumnAddedInMovies.resx">
+      <DependentUpon>201912050307285_newColumnAddedInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912050310423_updatedTheNameColumnPropertiesInMovies.resx">
+      <DependentUpon>201912050310423_updatedTheNameColumnPropertiesInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912050311523_populatingMoviesNewColumns.resx">
+      <DependentUpon>201912050311523_populatingMoviesNewColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912050359477_addedGenreColumnConstraints.resx">
+      <DependentUpon>201912050359477_addedGenreColumnConstraints.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

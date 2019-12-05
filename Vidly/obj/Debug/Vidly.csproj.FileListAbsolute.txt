@@ -223,3 +223,8 @@ G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedGenreToTheMo
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.InserDataInGenrTable.resources
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.InserttedValueInGenreTable.resources
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.deletedoublenty.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.addingNewMoveis.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.newColumnAddedInMovies.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.updatedTheNameColumnPropertiesInMovies.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.populatingMoviesNewColumns.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.addedGenreColumnConstraints.resources
