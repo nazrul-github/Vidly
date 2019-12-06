@@ -23,7 +23,9 @@ namespace Vidly.Models
         [DisplayName("Date Added")]
         public DateTime DateAdded { get; set; }
 
+
         [DisplayName("Number In Stock")]
+        [Range( 1,20, ErrorMessage = "Number of stock should be between 1 and 20")]
         public byte NumberInStock { get; set; }
 
         [ForeignKey("Genre")]
@@ -31,5 +33,6 @@ namespace Vidly.Models
         public int GenreId { get; set; }
 
         public Genre Genre { get; set; }
+
     }
 }

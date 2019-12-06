@@ -9,25 +9,39 @@
 <h2>New Customer</h2>
 @using (@Html.BeginForm("Create", "Customer", FormMethod.Post))
 {
-    <div class="form-group">
-        @Html.LabelFor(m => m.Customer.Name)
-        @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Customer.BirthDate)
-        @Html.TextBoxFor(m => m.Customer.BirthDate,"{0:d MMM yyyy}", new { @class = "form-control"})
-    </div>
+@Html.ValidationSummary(true               , "Please fix following errors")
+<div class="form-group">
+    @Html.LabelFor(m => m.Customer.Name)
+    @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Customer.Name)    
+</div>
+
 
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.MembershipId)
         @Html.DropDownListFor(m => m.Customer.MembershipId, new SelectList(Model.Memberships, "Id", "MembershipName"), "--Select Membership--", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.MembershipId)
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.BirthDate)
+        @Html.TextBoxFor(m => m.Customer.BirthDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.BirthDate)
+
     </div>
     <div class="checkbox">
         <label>
             @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsLetter) Subscribed to news letter?
+            @Html.ValidationMessageFor(m => m.Customer.IsSubscribedToNewsLetter)
+
         </label>
     </div>
+    @Html.HiddenFor(m => m.Customer.Id)
+    @Html.AntiForgeryToken()
     <input type="submit" class="btn btn-primary" value="Save" />
 
 }
-
+@section scripts
+{
+@Scripts.Render("~/bundles/jqueryval")
+}

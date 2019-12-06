@@ -26,7 +26,7 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-            var customer = _context.Customers.Include(c => c.MembershipType).ToList().OrderByDescending(c=>c.Id);
+            var customer = _context.Customers.Include(c => c.MembershipType).ToList().OrderByDescending(c => c.Id);
             return View(customer);
         }
 
@@ -44,15 +44,16 @@ namespace Vidly.Controllers
         public ActionResult Create()
         {
             var membershiptype = _context.MembershipTypes.ToList();
-            var customerMembership = new CustomerMembershipViewModel() { Memberships = membershiptype };
+            var customerMembership = new CustomerMembershipViewModel() { Memberships = membershiptype, Customer = new Customer() };
             return View(customerMembership);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CustomerMembershipViewModel customerMembershipView)
         {
             var membership = _context.MembershipTypes.ToList();
-            var customerMembership = new CustomerMembershipViewModel() { Memberships = membership };
+            var customerMembership = new CustomerMembershipViewModel() { Memberships = membership, Customer = new Customer()};
             if (ModelState.IsValid)
             {
                 if (customerMembershipView.Customer.Id == 0)
@@ -62,12 +63,12 @@ namespace Vidly.Controllers
                     return RedirectToAction("Index");
                 }
 
-                /*       var customer = _context.Customers.Single(c => c.Id== customerMembershipView.Customer.Id);
-                       customer.Name = customerMembershipView.Customer.Name;
-                       customer.BirthDate = customerMembershipView.Customer.BirthDate;
-                       customer.IsSubscribedToNewsLetter = customerMembershipView.Customer.IsSubscribedToNewsLetter;
-                       _context.SaveChanges();
-                       return RedirectToAction("Index");*/
+                var customer = _context.Customers.Single(c => c.Id == customerMembershipView.Customer.Id);
+                customer.Name = customerMembershipView.Customer.Name;
+                customer.BirthDate = customerMembershipView.Customer.BirthDate;
+                customer.IsSubscribedToNewsLetter = customerMembershipView.Customer.IsSubscribedToNewsLetter;
+                _context.SaveChanges();
+                return RedirectToAction("Index");
             }
 
             return View(customerMembership);
@@ -87,28 +88,28 @@ namespace Vidly.Controllers
                 Memberships = _context.MembershipTypes.ToList()
             };
 
-            return View(viewModel);
+            return View("Create",viewModel);
         }
-        [HttpPost]
-        public ActionResult Edit(Customer customer)
-        {
-            var viewModel = new CustomerMembershipViewModel()
-            {
-                Customer = customer,
-                Memberships = _context.MembershipTypes.ToList()
-            };
-            if (ModelState.IsValid)
-            {
-                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
-                customerInDb.MembershipId = customer.MembershipId;
-                customerInDb.Name = customer.Name;
-                customerInDb.BirthDate = customer.BirthDate;
-                customerInDb.IsSubscribedToNewsLetter = customer.IsSubscribedToNewsLetter;
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        /* [HttpPost]
+         public ActionResult Edit(Customer customer)
+         {
+             var viewModel = new CustomerMembershipViewModel()
+             {
+                 Customer = customer,
+                 Memberships = _context.MembershipTypes.ToList()
+             };
+             if (ModelState.IsValid)
+             {
+                 var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+                 customerInDb.MembershipId = customer.MembershipId;
+                 customerInDb.Name = customer.Name;
+                 customerInDb.BirthDate = customer.BirthDate;
+                 customerInDb.IsSubscribedToNewsLetter = customer.IsSubscribedToNewsLetter;
+                 _context.SaveChanges();
+                 return RedirectToAction("Index");
+             }
 
-            return View(viewModel);
-        }
+             return View(viewModel);
+         }*/
     }
 }

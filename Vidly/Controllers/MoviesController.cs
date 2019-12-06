@@ -85,18 +85,31 @@ namespace Vidly.Controllers
         public ActionResult Create()
         {
             var genres = _applicationDbContext.Genres.ToList();
-            MovieGenreViewModel movieGenreViewModel = new MovieGenreViewModel() { Genres = genres };
+            MovieGenreViewModel movieGenreViewModel = new MovieGenreViewModel() { Genres = genres, };
             return View(movieGenreViewModel);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Movie movie)
         {
             var genres = _applicationDbContext.Genres.ToList();
-            MovieGenreViewModel movieGenreViewModel = new MovieGenreViewModel() { Genres = genres };
+            MovieGenreViewModel movieGenreViewModel = new MovieGenreViewModel(movie) { Genres = genres };
             if (ModelState.IsValid)
             {
-                _applicationDbContext.Movies.Add(movie);
+                if (movie.Id == 0)
+                {
+                    _applicationDbContext.Movies.Add(movie);
+                    _applicationDbContext.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+
+                var amovie = _applicationDbContext.Movies.Single(m => m.Id == movie.Id);
+                amovie.DateAdded = movie.DateAdded;
+                amovie.GenreId = movie.GenreId;
+                amovie.NumberInStock = movie.NumberInStock;
+                amovie.Name = movie.Name;
+                amovie.ReleaseDate = movie.ReleaseDate;
                 _applicationDbContext.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -112,29 +125,30 @@ namespace Vidly.Controllers
                 return HttpNotFound();
             }
             var genres = _applicationDbContext.Genres.ToList();
-            var moviegenre = new MovieGenreViewModel() { Genres = genres, Movie = movie };
-            return View(moviegenre);
+            var moviegenre = new MovieGenreViewModel(movie) { Genres = genres };
+
+            return View("Create", moviegenre);
         }
 
-        [HttpPost]
-        public ActionResult Edit(Movie movie)
-        {
-            var amovie = _applicationDbContext.Movies.Single(m => m.Id == movie.Id);
-            if (ModelState.IsValid)
-            {
-                amovie.GenreId = movie.GenreId;
-                amovie.Name = movie.Name;
-                amovie.NumberInStock = movie.NumberInStock;
-                amovie.ReleaseDate = movie.ReleaseDate;
-                amovie.DateAdded = movie.DateAdded;
-                _applicationDbContext.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            var genres = _applicationDbContext.Genres.ToList();
-            var moviegenre = new MovieGenreViewModel() { Genres = genres, Movie = amovie };
+        /* [HttpPost]
+         public ActionResult Edit(Movie movie)
+         {
+             var amovie = _applicationDbContext.Movies.Single(m => m.Id == movie.Id);
+             if (ModelState.IsValid)
+             {
+                 amovie.GenreId = movie.GenreId;
+                 amovie.Name = movie.Name;
+                 amovie.NumberInStock = movie.NumberInStock;
+                 amovie.ReleaseDate = movie.ReleaseDate;
+                 amovie.DateAdded = movie.DateAdded;
+                 _applicationDbContext.SaveChanges();
+                 return RedirectToAction("Index");
+             }
+             var genres = _applicationDbContext.Genres.ToList();
+             var moviegenre = new MovieGenreViewModel() { Genres = genres, Movie = amovie };
 
-            return View(moviegenre);
+             return View(moviegenre);
 
-        }
+         }*/
     }
 }

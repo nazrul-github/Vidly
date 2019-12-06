@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Security.AccessControl;
 using System.Web;
+using Vidly.BLL;
 
 namespace Vidly.Models
 {
@@ -14,13 +15,14 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter customer's name.")]
         [StringLength(255)]
         public string Name { get; set; }
 
         public bool IsSubscribedToNewsLetter { get; set; }
 
         [Display(Name = "Date of birth")]
+        [Min18YearsIfAMember]
         public DateTime? BirthDate { get; set; }
 
         [DisplayName("Membership")]
