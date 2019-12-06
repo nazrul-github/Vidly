@@ -51,14 +51,23 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Create(CustomerMembershipViewModel customerMembershipView)
         {
-            var membershiptype = _context.MembershipTypes.ToList();
-            var customerMembership = new CustomerMembershipViewModel() { Memberships = membershiptype };
+            var membership = _context.MembershipTypes.ToList();
+            var customerMembership = new CustomerMembershipViewModel() { Memberships = membership };
             if (ModelState.IsValid)
             {
-                _context.Customers.Add(customerMembershipView.Customer);
+                if (customerMembershipView.Customer.Id==0)
+                {
+                    _context.Customers.Add(customerMembershipView.Customer);
+                    _context.SaveChanges();
+                return RedirectToAction("Index");
+                }
+
+                var customer = _context.Customers.Single(c=>c.Id == customerMembership.Customer.Id);
+                customer.Name = customerMembership.Customer.Name;
+                customer.BirthDate = customerMembership.Customer.BirthDate;
+                customer.IsSubscribedToNewsLetter = customerMembership.Customer.IsSubscribedToNewsLetter;
                 _context.SaveChanges();
                 return RedirectToAction("Index");
-
             }
 
             return View(customerMembership);
@@ -79,7 +88,7 @@ namespace Vidly.Controllers
             
             return View("Create", viewModel);
         }
-       [HttpPost]
+     /*  [HttpPost]
         public ActionResult Edit(Customer customer)
         {
             var viewModel = new CustomerMembershipViewModel()
@@ -99,6 +108,6 @@ namespace Vidly.Controllers
             }
 
             return View("Create", viewModel);
-        }
+        }*/
     }
 }
