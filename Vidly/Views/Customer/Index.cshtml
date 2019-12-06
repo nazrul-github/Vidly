@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Vidly.Models.Customer>
 
+@Html.ActionLink("Create","Create")
 
 <table class="table">
     <tr>
@@ -10,6 +11,7 @@
         <th>
             @Html.DisplayNameFor(m => m.MembershipType.MembershipName)
         </th>
+      
 
 
     </tr>
@@ -24,7 +26,6 @@
     <td>
         @item.MembershipType.MembershipName
     </td>
-
 
 </tr>
 }

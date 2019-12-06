@@ -26,7 +26,7 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-            var customer = _context.Customers.Include(c => c.MembershipType).ToList();
+            var customer = _context.Customers.Include(c => c.MembershipType).ToList().OrderByDescending(c=>c.Id);
             return View(customer);
         }
 
@@ -55,19 +55,19 @@ namespace Vidly.Controllers
             var customerMembership = new CustomerMembershipViewModel() { Memberships = membership };
             if (ModelState.IsValid)
             {
-                if (customerMembershipView.Customer.Id==0)
+                if (customerMembershipView.Customer.Id == 0)
                 {
                     _context.Customers.Add(customerMembershipView.Customer);
                     _context.SaveChanges();
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
                 }
 
-                var customer = _context.Customers.Single(c=>c.Id == customerMembership.Customer.Id);
-                customer.Name = customerMembership.Customer.Name;
-                customer.BirthDate = customerMembership.Customer.BirthDate;
-                customer.IsSubscribedToNewsLetter = customerMembership.Customer.IsSubscribedToNewsLetter;
-                _context.SaveChanges();
-                return RedirectToAction("Index");
+                /*       var customer = _context.Customers.Single(c => c.Id== customerMembershipView.Customer.Id);
+                       customer.Name = customerMembershipView.Customer.Name;
+                       customer.BirthDate = customerMembershipView.Customer.BirthDate;
+                       customer.IsSubscribedToNewsLetter = customerMembershipView.Customer.IsSubscribedToNewsLetter;
+                       _context.SaveChanges();
+                       return RedirectToAction("Index");*/
             }
 
             return View(customerMembership);
@@ -77,18 +77,19 @@ namespace Vidly.Controllers
         {
             var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
 
-            if (customer ==null)
+            if (customer == null)
             {
                 return HttpNotFound();
             }
             var viewModel = new CustomerMembershipViewModel()
             {
-                Customer = customer,Memberships = _context.MembershipTypes.ToList()
+                Customer = customer,
+                Memberships = _context.MembershipTypes.ToList()
             };
-            
-            return View("Create", viewModel);
+
+            return View(viewModel);
         }
-     /*  [HttpPost]
+        [HttpPost]
         public ActionResult Edit(Customer customer)
         {
             var viewModel = new CustomerMembershipViewModel()
@@ -107,7 +108,7 @@ namespace Vidly.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View("Create", viewModel);
-        }*/
+            return View(viewModel);
+        }
     }
 }
