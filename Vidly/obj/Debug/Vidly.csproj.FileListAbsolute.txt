@@ -229,3 +229,11 @@ G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.updatedTheNameCol
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.populatingMoviesNewColumns.resources
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.addedGenreColumnConstraints.resources
 G:\VS 2017 Project\#MVC\Vidly\Vidly\obj\Debug\Vidly.Migrations.membershipTypeTable.resources
+G:\VS 2017 Project\#MVC\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+G:\VS 2017 Project\#MVC\Vidly\Vidly\bin\System.Web.Http.dll
+G:\VS 2017 Project\#MVC\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+G:\VS 2017 Project\#MVC\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+G:\VS 2017 Project\#MVC\Vidly\Vidly\bin\System.Web.Http.xml
+G:\VS 2017 Project\#MVC\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+G:\VS 2017 Project\#MVC\Vidly\Vidly\bin\AutoMapper.dll
+G:\VS 2017 Project\#MVC\Vidly\Vidly\bin\AutoMapper.xml
