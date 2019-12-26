@@ -36,6 +36,8 @@
 
         </label>
     </div>
+    @Html.ActionLink("Directly go to details","Details",new{id=3})
+    <a href="@Url.Action("Edit",new{id=5})">Directly go to edit</a>
     @Html.HiddenFor(m => m.Customer.Id)
     @Html.AntiForgeryToken()
     <input type="submit" class="btn btn-primary" value="Save" />
